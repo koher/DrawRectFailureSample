@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pressButton(_ sender: UIButton) {
-        // this does not make `drawRect` fail
         heightConstraint.constant += 1000
+        scrollView.subviews[0].setNeedsDisplay()
     }
 }
 
